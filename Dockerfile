@@ -22,13 +22,13 @@ ENV RUN_SCRIPT ~/.bashrc
 # Install additional packages
 RUN zypper in -y python3 && \
     zypper in -y python3-pip && \
-    zypper in -y gcc7 gcc7-fortran gcc7-c++ && \
+    zypper in -y gcc5 gcc5-fortran gcc5-c++ && \
     zypper in -y make cmake less sudo doxygen rsync which nano git && \
     zypper in -y libquadmath0 && \
-    # symbolic link to gcc-7
-    ln -s /usr/bin/gcc-7 /usr/bin/gcc && \
-    ln -s /usr/bin/g++-7 /usr/bin/g++ && \
-    ln -s /usr/bin/gfortran-7 /usr/bin/gfortran && \
+    # symbolic link to gcc-5
+    ln -s /usr/bin/gcc-5 /usr/bin/gcc && \
+    ln -s /usr/bin/g++-5 /usr/bin/g++ && \
+    ln -s /usr/bin/gfortran-5 /usr/bin/gfortran && \
     # pip3 packages
     pip3 install --upgrade pip && \
     pip3 install pytest pytest-xdist pypact numpy
