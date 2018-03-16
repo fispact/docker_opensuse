@@ -20,8 +20,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 ENV RUN_SCRIPT ~/.bashrc
 
 # Install additional packages
-RUN zypper in -y python3 && \
-    zypper in -y python3-pip && \
+RUN zypper in -y python3 python3-devel python3-pip && \
     zypper in -y gcc5 gcc5-fortran gcc5-c++ && \
     zypper in -y make cmake less sudo doxygen rsync which nano git && \
     zypper in -y libquadmath0 && \
